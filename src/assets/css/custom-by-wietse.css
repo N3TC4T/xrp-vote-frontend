@@ -1,0 +1,64 @@
+#section-home {
+    padding-top: 40px;
+    min-height: 600px;
+}
+@media (max-width: 991px) {
+    ul.navbar-nav.ml-auto {
+        padding-bottom: 15px;
+        text-align: center;
+        border-radius: 4px;
+    }
+}
+
+.pb_cover_v3 a, .pb_xl_py_cover a {
+    border: 2px solid transparent;
+}
+.pb_cover_v3 a:hover, .pb_xl_py_cover a:hover {
+    border-bottom: 2px solid transparent;
+}
+
+.pb_cover_v3 a.smoothscroll:hover, .pb_xl_py_cover a.smoothscroll:hover {
+    border-bottom: 2px solid transparent;
+    border: 2px solid #fff;
+}
+
+input[type="file"] {
+    padding: 14px;
+    font-size: 13px;
+}
+
+input[type="submit"], button {
+    cursor: pointer;
+}
+
+.pb_icon.img-thumbnail {
+    width: auto;
+    height: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.pb_icon.img-thumbnail img {
+    max-height: 190px;
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+
+.votebtn {
+    margin-top: 3px;
+}
+
+.btn b {
+    font-weight: 700;
+}
+
+textarea {
+    resize: none;
+}

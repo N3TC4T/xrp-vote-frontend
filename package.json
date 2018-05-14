@@ -1,0 +1,35 @@
+{
+  "name": "xrp-vote-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.1",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1",
+    "moment": "^2.22.1",
+    "popper.js": "^1.14.3",
+    "prop-types": "^15.5.8",
+    "query-string": "^4.3.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-file-base64": "^1.0.3",
+    "react-i18nify": "^1.11.14",
+    "react-router-dom": "^4.1.1",
+    "react-share": "^1.13.2",
+    "tether": "^1.4.4",
+    "universal-cookie": "^2.0.5"
+  },
+  "devDependencies": {
+    "enzyme": "^2.8.2",
+    "react-scripts": "0.9.5",
+    "react-test-renderer": "^15.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://127.0.0.1:8000"
+}
