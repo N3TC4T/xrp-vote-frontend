@@ -18,7 +18,7 @@ const Symbol = (props) => {
                         props.voted || props.successVote
                             ? (
                                 <button className="btn btn-success btn-block text-center">
-                                    {props.voted ? (locales.t('application.alreadyVoted')) : (locales.t('application.voted'))}
+                                    {props.voted ? (locales.t('application.alreadyVote')) : (locales.t('application.voted'))}
                                     <i className="fa fa-check"></i>
                                 </button>
 
