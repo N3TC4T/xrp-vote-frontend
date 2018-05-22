@@ -63,9 +63,21 @@ class Home extends Component {
                                                     {locales.t('home.NotLoggedIn')}
                                                 </p>
                                                 <div className="form-group">
-                                                    <a href="#"
-                                                       className="btn btn-primary btn-lg btn-block pb_btn-pill btn-shadow-blue">
-                                                        <i className="fa fa-twitter" />{locales.t('application.login')}</a>
+                                                    {
+                                                        this.props.fetchingToken ? (
+                                                            <a href="#"
+                                                               className="btn btn-primary btn-lg btn-block pb_btn-pill btn-shadow-blue">
+                                                                <i className="fa fa-twitter" />{locales.t('application.loading')}
+                                                            </a>
+                                                        ) : (
+                                                            <a href="#"
+                                                               onClick={this.props.twitterLoginStart}
+                                                               className="btn btn-primary btn-lg btn-block pb_btn-pill btn-shadow-blue">
+                                                                <i className="fa fa-twitter" />{locales.t('application.login')}
+                                                            </a>
+                                                        )
+                                                    }
+
                                                 </div>
                                             </form>
                                         )

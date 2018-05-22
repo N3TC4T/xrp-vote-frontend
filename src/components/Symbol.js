@@ -17,7 +17,7 @@ const Symbol = (props) => {
                     {
                         props.voted || props.successVote
                             ? (
-                                <button className="btn btn-success btn-block text-center">
+                                <button className="btn btn-success btn-block text-center" disabled>
                                     {props.voted ? (locales.t('application.alreadyVote')) : (locales.t('application.voted'))}
                                     <i className="fa fa-check"></i>
                                 </button>
@@ -27,13 +27,14 @@ const Symbol = (props) => {
                                 <button
                                     onClick={props.onVote}
                                     className="btn btn-primary btn-block text-center"
+                                    disabled
                                 >
                                     <i className="fa fa-heart"></i>&nbsp;{locales.t('application.vote')}
 
                                 </button>
                             )
                     }
-                    <button className="btn btn-outline-primary"><b>{props.totalVotes}</b></button>
+                    <button className="btn btn-outline-primary" ><b>{props.totalVotes}</b></button>
                 </div>
                 <div className="media-body">
                     <h6 className="mt-0 mb-3 heading text-center">
