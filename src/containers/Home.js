@@ -184,6 +184,20 @@ class Home extends Component {
                                         </div>
                                     </div>
 
+                                    <div className="item">
+                                        <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq6"
+                                           aria-expanded="false" aria-controls="pb_faq6" className="pb_font-22 py-4">
+                                            {locales.t('home.FAQ6')}
+                                        </a>
+                                        <div id="pb_faq6" className="collapse" role="tabpanel">
+                                            <div className="py-3">
+                                                <p style={{"white-space": "pre-wrap"}}>
+                                                    {locales.t('home.FAQ6Answer')}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

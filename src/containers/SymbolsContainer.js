@@ -67,7 +67,7 @@ class SymbolsContainer extends Component {
         const indexOfFirstTodo = indexOfLastSymbol - symbolsPerPage;
         const currentSymbols = symbols.slice(indexOfFirstTodo, indexOfLastSymbol);
 
-        const renderSymbols = currentSymbols.map((symbol, index) => {
+        const renderSymbols = symbols.map((symbol, index) => {
             return <SymbolContainer
                 symbol={symbol}
                 key={index}
@@ -115,13 +115,13 @@ class SymbolsContainer extends Component {
                                     {renderSymbols}
                                 </div>
 
-                                <div className="row align-items-center justify-content-center">
-                                    <nav aria-label="navigation">
-                                        <ul className="pagination justify-content-center">
-                                            {renderPageNumbers}
-                                        </ul>
-                                    </nav>
-                                </div>
+                                {/*<div className="row align-items-center justify-content-center">*/}
+                                    {/*<nav aria-label="navigation">*/}
+                                        {/*<ul className="pagination justify-content-center">*/}
+                                            {/*{renderPageNumbers}*/}
+                                        {/*</ul>*/}
+                                    {/*</nav>*/}
+                                {/*</div>*/}
                             </div>
                         )
                         : (
