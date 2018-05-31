@@ -63,9 +63,21 @@ class Home extends Component {
                                                     {locales.t('home.NotLoggedIn')}
                                                 </p>
                                                 <div className="form-group">
-                                                    <a href="#"
-                                                       className="btn btn-primary btn-lg btn-block pb_btn-pill btn-shadow-blue">
-                                                        <i className="fa fa-twitter" />{locales.t('application.login')}</a>
+                                                    {
+                                                        this.props.fetchingToken ? (
+                                                            <a href="#"
+                                                               className="btn btn-primary btn-lg btn-block pb_btn-pill btn-shadow-blue">
+                                                                <i className="fa fa-twitter" />{locales.t('application.loading')}
+                                                            </a>
+                                                        ) : (
+                                                            <a href="#"
+                                                               onClick={this.props.twitterLoginStart}
+                                                               className="btn btn-primary btn-lg btn-block pb_btn-pill btn-shadow-blue">
+                                                                <i className="fa fa-twitter" />{locales.t('application.login')}
+                                                            </a>
+                                                        )
+                                                    }
+
                                                 </div>
                                             </form>
                                         )
@@ -167,6 +179,20 @@ class Home extends Component {
                                             <div className="py-3">
                                                 <p>
                                                     {locales.t('home.FAQ5Answer')}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="item">
+                                        <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq6"
+                                           aria-expanded="false" aria-controls="pb_faq6" className="pb_font-22 py-4">
+                                            {locales.t('home.FAQ6')}
+                                        </a>
+                                        <div id="pb_faq6" className="collapse" role="tabpanel">
+                                            <div className="py-3">
+                                                <p style={{"white-space": "pre-wrap"}}>
+                                                    {locales.t('home.FAQ6Answer')}
                                                 </p>
                                             </div>
                                         </div>

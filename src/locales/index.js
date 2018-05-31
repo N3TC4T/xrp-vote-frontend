@@ -1,12 +1,8 @@
 import { I18n } from 'react-i18nify'
-import th from './th.json'
 import en from './en.json'
-import pt from './pt.json'
 
 I18n.setTranslations({
-    th,
-    en,
-    pt
+    en
 });
 
 if(localStorage.getItem('locale') === null){
@@ -18,7 +14,7 @@ else
     I18n.setLocale(localStorage.getItem('locale'));
 }
 
-Object.defineProperty(I18n, "all", {value : ['en', 'th', 'pt'],
+Object.defineProperty(I18n, "all", {value : ['en'],
     writable : false,
     enumerable : true,
     configurable : false

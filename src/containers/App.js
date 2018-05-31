@@ -84,7 +84,10 @@ class App extends Component {
                     twitterLoginStart={this.twitterLoginStart}
                 />
                 <Switch>
-                    <Route exact path="/" component={Home} />
+                    <Route
+                        exact path="/"
+                        component={() => <Home twitterLoginStart={this.twitterLoginStart}  fetchingToken={this.state.fetchingToken} />}
+                    />
                     <Authenticated exact path="/submit" component={Submit} />
                     <Route path="/twitter_logged_in/" component={LoginTwitter} />
                     <Route path="/logout" component={Logout} />
