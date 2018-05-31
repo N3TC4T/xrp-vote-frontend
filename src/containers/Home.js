@@ -191,7 +191,7 @@ class Home extends Component {
                                         </a>
                                         <div id="pb_faq6" className="collapse" role="tabpanel">
                                             <div className="py-3">
-                                                <p style={{"white-space": "pre-wrap"}}>
+                                                <p style={{"whiteSpace": "pre-wrap"}}>
                                                     {locales.t('home.FAQ6Answer')}
                                                 </p>
                                             </div>

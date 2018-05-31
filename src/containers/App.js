@@ -36,11 +36,11 @@ class App extends Component {
         localStorage.removeItem('user');
 
         // http://stackoverflow.com/questions/4068373/center-a-popup-window-on-screen
-        let dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
-        let dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
+        let dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screen.left;
+        let dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screen.top;
 
-        let width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-        let height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+        let width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : window.screen.width;
+        let height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : window.screen.height;
 
         let left = ((width / 2) - (570 / 2)) + dualScreenLeft;
         let top = ((height / 2) - (520 / 2)) + dualScreenTop;

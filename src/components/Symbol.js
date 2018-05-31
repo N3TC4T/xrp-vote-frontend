@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
 import Truncate from 'react-truncate';
+import ImageZoom from 'react-medium-image-zoom'
 
 import locales from '../../src/locales';
 
@@ -53,13 +54,23 @@ class Symbol extends Component {
             <div className="col-lg-4 col-md- col-sm-6">
                 <div className="media d-block pb_feature-v1 text-left">
                     <div className="pb_icon img-thumbnail">
-                        <img src={img_url} className="img-fluid"/>
+                        <ImageZoom
+                            image={{
+                                src: img_url,
+                                alt: 'Golden Gate Bridge',
+                                className: 'img-fluid'
+                            }}
+                            zoomImage={{
+                                src: img_url,
+                                alt: 'Golden Gate Bridge'
+                            }}
+                        />
                     </div>
                     <div className="btn-group btn-block votebtn">
                         {
                             this.props.voted || this.props.successVote
                                 ? (
-                                    <button className="btn btn-success btn-block text-center" disabled>
+                                    <button className="btn btn-success btn-block text-center" disabled={!symbol.votable}>
                                         {this.props.voted ? (locales.t('application.alreadyVote')) : (locales.t('application.voted'))}
                                         <i className="fa fa-check" />
                                     </button>
@@ -69,7 +80,7 @@ class Symbol extends Component {
                                     <button
                                         onClick={this.props.onVote}
                                         className="btn btn-primary btn-block text-center"
-                                        disabled
+                                        disabled={!symbol.votable}
                                     >
                                         <i className="fa fa-heart"/>&nbsp;{locales.t('application.vote')}
 
@@ -80,7 +91,7 @@ class Symbol extends Component {
                     </div>
                     <div className="media-body">
                         <h6 className="mt-0 mb-3 heading text-center">
-                            <small><b>@{symbol.username}</b></small>
+                            <small><a target={'_blank'} href={`https://twitter.com/${symbol.username}`}><b>@{symbol.username}</b></a></small>
                         </h6>
                         <Truncate
                             className="text-sans-serif"
